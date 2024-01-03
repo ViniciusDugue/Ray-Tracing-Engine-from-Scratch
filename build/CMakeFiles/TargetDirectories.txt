@@ -1,0 +1,3 @@
+//wsl.localhost/Debian/home/vinicius/RayTracer/build/CMakeFiles/InOneWeekend.dir
+//wsl.localhost/Debian/home/vinicius/RayTracer/build/CMakeFiles/ALL_BUILD.dir
+//wsl.localhost/Debian/home/vinicius/RayTracer/build/CMakeFiles/ZERO_CHECK.dir
