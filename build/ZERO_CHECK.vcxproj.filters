@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <CustomBuild Include="\\wsl.localhost\Debian\home\vinicius\RayTracer\build\CMakeFiles\a040dc537ea417de3899da7f4ccfd424\generate.stamp.rule">
+    <CustomBuild Include="\\wsl.localhost\Debian\home\vinicius\Ray-Tracing-Engine\build\CMakeFiles\5395efb286ae4822106b058b857e183b\generate.stamp.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="CMake Rules">
-      <UniqueIdentifier>{673CE5C2-A8C6-3D96-BC4E-FEAA95536C82}</UniqueIdentifier>
+      <UniqueIdentifier>{23535B63-3180-338F-96A7-42236F3130D6}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

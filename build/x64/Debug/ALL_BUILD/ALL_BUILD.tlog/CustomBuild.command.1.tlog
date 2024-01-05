@@ -1,6 +1,6 @@
-^\\WSL.LOCALHOST\DEBIAN\HOME\VINICIUS\RAYTRACER\CMAKELISTS.TXT
+^\\WSL.LOCALHOST\DEBIAN\HOME\VINICIUS\RAY-TRACING-ENGINE\CMAKELISTS.TXT
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -S//wsl.localhost/Debian/home/vinicius/RayTracer -B//wsl.localhost/Debian/home/vinicius/RayTracer/build --check-stamp-file //wsl.localhost/Debian/home/vinicius/RayTracer/build/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -S//wsl.localhost/Debian/home/vinicius/Ray-Tracing-Engine -B//wsl.localhost/Debian/home/vinicius/Ray-Tracing-Engine/build --check-stamp-file //wsl.localhost/Debian/home/vinicius/Ray-Tracing-Engine/build/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone

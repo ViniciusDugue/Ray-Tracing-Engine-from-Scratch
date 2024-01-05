@@ -16,16 +16,20 @@ class camera
     int    samples_per_pixel = 10;   // Count of random samples for each pixel
     int    max_depth = 10;
 
-    void render(const hittable& world) {
+    void render(const hittable& world) 
+    {
         initialize();
 
         std::cout << "P3\n" << image_width << ' ' << image_height << "\n255\n";
 
+        // iterates through each line, each pixel per line, each sample per pixel
         for (int j = 0; j < image_height; ++j) {
             std::clog << "\rScanlines remaining: " << (image_height - j) << ' ' << std::flush;
             for (int i = 0; i < image_width; ++i) {
                 color pixel_color(0,0,0);
-                for (int sample = 0; sample < samples_per_pixel; ++sample) {
+                // for each pixel, find random point samples and add up all point samples
+                for (int sample = 0; sample < samples_per_pixel; ++sample) 
+                {
                     ray r = get_ray(i, j);
                     pixel_color += ray_color(r, max_depth, world);
                 }
@@ -102,12 +106,16 @@ class camera
             return color(0,0,0);
 
         // recursively casts ray until it stops hitting something or depth is achieved
-        if (world.hit(r, interval(0, infinity), rec))
+        // essentially for every hit the blue raycolor is darkened which is why the sky is light blue
+        if (world.hit(r, interval(0.001, infinity), rec))
         {
-            vec3 direction = random_on_hemisphere(rec.normal);
+            //scattering reflected rays are more likely to scatter in directions towards the normal
+            // this is done by randomly generating a vector according lambertian distrubution
+            vec3 direction = rec.normal + random_unit_vector();
             return 0.5 * ray_color(ray(rec.p, direction), depth-1, world);
         }
 
+        // return final color 
         vec3 unit_direction = unit_vector(r.direction());
         auto a = 0.5*(unit_direction.y() + 1.0);
         return (1.0-a)*color(1.0, 1.0, 1.0) + a*color(0.5, 0.7, 1.0);
